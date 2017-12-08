@@ -1,0 +1,11 @@
+ <form #f="ngForm" (ngSubmit)="login(f.value)">
+    <div class="form-group">
+        <label for="uemail"> Email </label> 
+        <input type="text" name="uemail" class="form-group" required #first="ngModel" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" />
+    </div>
+    <div class="form-group">
+        <label for="usenha"> Senha </label> 
+        <input type="password" name="usenha" class="form-group" required #last="ngModel" [(ngModel)]="senha" [ngModelOptions]="{standalone: true}"/>
+    </div>
+    <button type="submit" class="btn-default btn"> Logar </button>
+</form> 
